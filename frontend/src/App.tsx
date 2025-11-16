@@ -1,6 +1,9 @@
 import {Flexbox} from 'bluestar';
+import useWeatherData from './services/useWeatherData';
 
 function App() {
+
+  const weather = useWeatherData();
 
   return (
     <Flexbox direction='column' gap={16}>
@@ -32,6 +35,15 @@ function App() {
             In condimentum sapien vel vestibulum efficitur. Nullam fermentum felis faucibus quam maximus congue. Vestibulum ipsum orci, blandit eget tempor at, rutrum vitae ante. Nulla scelerisque sodales nisi et malesuada. Maecenas leo velit, fringilla id sagittis ac, blandit ut lorem. Curabitur scelerisque, velit ut vulputate vestibulum, nibh ligula tempor ligula, a porttitor tortor lorem nec velit. Fusce tempus in enim id viverra. Praesent id lacus in sem consectetur suscipit. Ut luctus viverra dignissim.
           </p>
         </Flexbox>  
+      </Flexbox>
+
+      <Flexbox justifyContent='space-evenly'>
+        {weather?.map((w, i) => (
+          <pre key={i}>
+            {JSON.stringify(w, null, 2)}
+          </pre>
+          ))
+        }
       </Flexbox>
     </Flexbox>
   )
