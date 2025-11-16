@@ -1,5 +1,6 @@
 import {Flexbox} from 'bluestar';
 import useWeatherData from './services/useWeatherData';
+import PingPong from './components/PingPong';
 
 function App() {
 
@@ -36,6 +37,8 @@ function App() {
           </p>
         </Flexbox>  
       </Flexbox>
+
+      <PingPong/>
 
       <Flexbox justifyContent='space-evenly'>
         {weather?.map((w, i) => (

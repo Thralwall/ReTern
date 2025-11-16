@@ -13,7 +13,7 @@ const API = {
 
   async post<T>(route: string, bodyData: any) {
     const response = await axios.post<T>(
-        URL + '/api/' + route, 
+        URL + '/' + route, 
         bodyData,
         {}
     );
