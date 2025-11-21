@@ -9,5 +9,5 @@ dotnet run
 and
 ```
 cd frontend
-npm start
+npm run dev
 ```
