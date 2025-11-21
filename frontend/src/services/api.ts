@@ -7,6 +7,7 @@ const API = {
     const response = await axios.get<T>(
         URL + '/' + route
       );
+      console.log("URL: " + URL)
 
     return response.data;
   },

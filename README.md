@@ -1,4 +1,7 @@
 # ReTern
+## Setup
+Edit .env.template in frontend folder
+Rename .env.template to .env
 ## Run
 In two terminals
 run
